@@ -5,69 +5,161 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
     <title>Dulces Momentos</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Servicios</li>
-                <li>Cursos</li>
-                <li>Nosotros</li>
-                <li>Contacto</li>
+    <header id="header">
+        <nav class="navBar">
+            <ul class="navBar__ul center">
+                <li> <a href="../index.html"> Home</a></li>
+                <li><a href="../pages/services.html">Servicios</a></li>
+                <!-- <li><a href=".index.html#seccion">Servicios</a></li> -->
+                <li><a href="./pages/courses.html">Cursos</a></li>
+                <li><a href="./pages/contact.html">Contacto</a></li>
             </ul>
         </nav>
-        <img src="./assets/torta banner.jpg" alt="Banner de pasteleria">
+        <a href="../index.html">
+            <img src="../assets/logo.png" alt="logo de dulces momentos" class="nav__logo">
+        </a>
     </header>
-    <div class="bannerPromocional">
-        <h3>Hace tu pedido online y retiralo por nuestra tienda</h3>
-        <p>Aprovecha el - 20% OFF! </p>
-        <img src="./assets/store-regular-24.png" alt="Logo tienda en banner promocional">
-    </div>
-    <section>
-        <div class="items">
-            <img src="./assets/grid_cookies.jpg" alt="cookies">
-            <img src="./assets/grid_cupcake.jfif" alt="cupcakes">
-            <img src="./assets/grid_macaron.jpg" alt="macarons">
-            <img src="./assets/grid_masasF.jpg" alt="masas">
+    <main>
+        
+        <div class="container">
+            <div class="row">
+                <div class="image">
+                    <img src="../assets/torta 7.jpg" alt="Cookies">
+                    <div class="details">
+                        <h2>Your <span>Title</span></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="../assets/grid_macaron.jpg" alt="">
+                    <div class="details">
+                        <h2>Your <span>Title</span></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="../assets/grid_masasF.jpg" alt="">
+                    <div class="details">
+                        <h2>Your <span>Title</span></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="image">
+                    <img src="../assets/grid_roja.jpg" alt="">
+                    <div class="details">
+                        <h2>Your <span>Title</span></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="../assets/grid_torta.jfif" alt="">
+                    <div class="details">
+                        <h2>Your <span>Title</span></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="../assets/grid_tortas.jpg" alt="">
+                    <div class="details">
+                        <h2>Your <span>Title</span></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="image">
+                    <img src="../assets/grid_velvet.jfif" alt="">
+                    <div class="details">
+                        <h2>Your <span>Title</span></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="../assets/torta 4.jpg" alt="">
+                    <div class="details">
+                        <h2>Your <span>Title</span></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="../assets/torta 6.jpg" alt="">
+                    <div class="details">
+                        <h2>Your <span>Title</span></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
-    <footer>
-        <img src="./assets/logo.png" alt="logo">
-        <nav>
-            <ul>
-                Menu
-                <li>Inicio</li>
-                <li>Servicios</li>
-                <li>Contacto</li>
-                <li>Nosotros</li>
-            </ul>
-        </nav>
 
-        <nav>
-            <ul>
-                Legal
-                <li>Privacidad</li>
-                <li>Cookies</li>
-                <li>Terminos y condiciones</li>
-            </ul>
-        </nav>
 
-        <div class="redes">
-            <p>Siguenos</p>
-            <img src="./assets/" alt="face">
-            <img src="./assets/" alt="insta">
-            <img src="./assets/" alt="whastapp">
+    </main>
+    <footer id="footer">
+        <div class="footer-container">
+            <a href="./index.html">
+                <img src="../assets/logo.png" alt="logo pasteleria" class="website-logo">
+            </a>
+            <div class="footer-content">
+                <span class="menu-title">Menu</span>
+                <a href="../index.html" class="menu-item-footer">Inicio</a>
+                <a href="./pages/services.html" class="menu-item-footer">Servicios</a>
+                <a href="./pages/courses.html" class="menu-item-footer">Cursos</a>
+                <a href="./pages/contact.html" class="menu-item-footer">Contacto</a>
+            </div>
+            <div class="footer-content">
+                <span class="menu-title">CONTACTANOS</span>
+                <p class="menu-item-footer">Tel: +54 11 2343-2345</p>
+                <p class="menu-item-footer">Nuestromail@gmail.com</p>
+                <p class="menu-item-footer">Av.Siempre viva 123, springield</p>
+            </div>
+
+            <div class="footer-content">
+                <span class="menu-title">Siguenos!</span>
+                <div class="social-content">
+                    <a href="#" class="social-link"><img src="../assets/facebook.svg" alt="facebook"></i></a>
+                    <a href="#" class="social-link"><img src="../assets/instagram.svg" alt="instagram"></i></a>
+                    <a href="#" class="social-link"><img src="../assets/whatsapp.svg" alt="whastapp"></i></a>
+                </div>
+            </div>
         </div>
-
-        <div class="copy">
-            <p>Hecho por <a href="#">Adrian2C</a> &copy; 2022 , Sol Patisserie</p>
+        <div class="copyright-container center">
+            <span class="copyright">Hecho por <a href="https://github.com/Adrian2C">Adrian2C</a> &copy;2021, Sol
+                Patiserie</span>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
