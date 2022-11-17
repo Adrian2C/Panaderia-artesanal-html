@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./pages/style.css">
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <title>Dulces Momentos</title>
 </head>
@@ -17,7 +17,7 @@
     <header id="header">
         <nav class="navBar">
             <ul class="navBar__ul center">
-                <li> <a href="./index.html"> Home</a></li>
+                <li> <a href="./pages/style.css"> Home</a></li>
                 <li><a href="./pages/services.html">Servicios</a></li>
                 <li><a href="./pages/courses.html">Cursos</a></li>
                 <li><a href="./pages/contact.html">Contacto</a></li>
@@ -36,7 +36,9 @@
             </div>
             <div class="right">
                 <a href="./pages/courses.html">
-                    <img src="./assets/shop.svg" alt="logo tienda">
+                    <!-- <svg class="bi" width="32" height="32" fill="currentColor"> -->
+                        <use xlink:href="bootstrap-icons.svg#shop" />
+                    </svg>
                 </a>
             </div>
         </div>
@@ -117,7 +119,8 @@
                 <span class="menu-title">Siguenos!</span>
                 <div class="social-content">
                     <a href="#" class="social-link"><img src="./assets/facebook.svg" alt="facebook"></i></a>
-                    <a href="#" class="social-link"><img src="./assets/instagram.svg" alt="instagram"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-instagram"></i>
+</a>
                     <a href="#" class="social-link"><img src="./assets/whatsapp.svg" alt="whastapp"></i></a>
                 </div>
             </div>
