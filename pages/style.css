@@ -25,25 +25,22 @@ a:hover {
 li {
   list-style: none;
 }
-
-.bi{
-  width:1em;
-  height:1em;
-  fill:currentColor;
+.bi-shop {
+  font-size: 5em;
+}
+.icon {
+  font-size: 2em;
 }
 /*generales*/
-.contenedor{
-  width:80%;
-  margin:auto;
-
+.contenedor {
+  width: 80%;
+  margin: auto;
 }
 .center {
   display: flex;
   text-align: center;
   justify-content: center;
 }
-
-
 
 /*header*/
 #header {
@@ -60,11 +57,11 @@ li {
   font-size: 1.25rem;
   text-transform: uppercase;
   padding: 1rem;
-  border-bottom: .125rem solid rgb(94, 84, 84);
+  border-bottom: 0.125rem solid rgb(94, 84, 84);
 }
 .navBar__ul {
   position: relative;
-  padding: .3125rem 0;
+  padding: 0.3125rem 0;
   background: rgba(136, 107, 107, 0.3);
 }
 .navBar__ul li {
@@ -73,7 +70,7 @@ li {
 }
 .navBar__ul li a {
   display: block;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
 
   color: white;
   text-decoration: none;
@@ -209,7 +206,7 @@ li {
   opacity: 0;
   transition: 0.6s;
   transition-property: opacity, transform;
-  color:rgb(49, 11, 11);
+  color: rgb(49, 11, 11);
 }
 
 .image:hover .details p {
@@ -248,10 +245,8 @@ li {
 }
 
 .contact-info h2 {
-
   margin-bottom: 15px;
   padding: 0 0 10px;
-  
 }
 
 .contact-info p {
@@ -260,7 +255,6 @@ li {
   margin-bottom: 20px;
   text-align: center;
 }
-
 
 .contact-info-input {
   width: 100%;
@@ -272,7 +266,7 @@ li {
 }
 
 .textarea {
-  padding-top:20px;
+  padding-top: 20px;
   height: 140px;
 }
 
@@ -301,7 +295,7 @@ li {
 
 .btn {
   width: 100%;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   background-color: #862445;
   color: #fff;
   font-size: 1.1rem;
@@ -320,8 +314,6 @@ li {
   height: 100%;
 }
 
-
-
 /*Footer*/
 
 #footer {
@@ -330,12 +322,12 @@ li {
 }
 
 .footer-container {
-  padding: 32px 80px;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
 }
 footer .website-logo {
-  width: 200px;
+  width: 12rem;
 }
 .footer-content {
   display: flex;
@@ -384,14 +376,11 @@ footer .website-logo {
   padding: 10px 0;
 }
 
-
 /*media queries*/
-
 
 @media only screen and (max-width: 700px) {
   .contact-wrap {
     display: flex;
     flex-direction: column;
   }
-  
 }
