@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "nombre": "Macarons",
+        "precio": 15000,
+        "fecha": "5/11/2022",
+        "lugar": "Presencial",
+        "img": "../assets/grid_macaron.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Masas Finas",
+        "precio": 8000,
+        "fecha": "5/11/2022",
+        "lugar": "Online",
+        "img": "../assets/grid_masasF.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Decoracion de tortas",
+        "precio": 2500,
+        "fecha": "5/11/2022",
+        "lugar": "online",
+        "img": "../assets/grid_roja.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Tortas para el mate",
+        "precio": 7800,
+        "fecha": "5/11/2022",
+        "lugar": "Grabado",
+        "img": "../assets/grid_tortas.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Preparacion de eventos",
+        "precio": 12000,
+        "fecha": "5/11/2022",
+        "lugar": "Presencial",
+        "img": "../assets/torta 6.jpg"
+    }
+    ,
+    {
+        "id": 6,
+        "nombre": "Cookies & More",
+        "precio": 9000,
+        "fecha": "5/11/2022",
+        "lugar": "Online",
+        "img": "../assets/torta 4.jpg"
+    }
+]
