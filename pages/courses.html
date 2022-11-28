@@ -41,51 +41,135 @@
                 </div>
             </div>
         </nav>
-        <a class="nav__logo" href="../index.html">
-            <img src="../assets/logo.png" alt="logo de dulces momentos">
+        <a href="../index.html">
+            <img src="../assets/logo.png" alt="logo de dulces momentos" class="logo__img">
         </a>
     </header>
-    <div class="w-75 p-4 m-auto">
-        <div id="tarjeta"class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 ">
-        </div>
-    </div>
 
-<footer id="footer">
-    <div class=" d-block d-md-flex justify-content-md-evenly pt-2">
-        <a href="../index.html" class="d-block text-center">
-            <img src="../assets/logo.png" alt="logo pasteleria" class="website-logo">
-        </a>
-        <div class="d-flex flex-column text-center fs-5 pt-3">
-            <span class="menu-title text-uppercase fw-bold">Menu</span>
-            <a href="../index.html" class=" fw-light text-white ">Inicio</a>
-            <a href="./services.html" class="fw-light  text-white ">Servicios</a>
-            <a href="./courses.html" class=" fw-light text-white ">Cursos</a>
-            <a href="./contact.html" class=" fw-light text-white ">Contacto</a>
-        </div>
-        <div class="d-flex flex-column text-center fs-5 pt-3">
-            <span class="menu-title text-uppercase fw-bold">CONTACTANOS</span>
-            <p class=" my-1 text-white fw-light">Tel: +54 11 2343-2345</p>
-            <p class=" my-1 text-white fw-light">Nuestromail@gmail.com</p>
-            <p class=" my-1 text-white fw-light">Av.Siempre viva 123, springield</p>
-        </div>
+    <div class="mainContainer">
+        <hr />
+        <h2 id="tickets" class="text-center">#Cursos#</h2>
+        <hr />
+        <div class="row" id="cards"></div>
+        <hr />
+        <template id="template-cards">
+            <div class="col  lg-2 col-md-4 g-4 ">
+                <div class="card ">
+                    <img src="" alt="" class="card-img-top" style="height:20rem;" />
+                    <div class="card-body text-center ">
+                        <h3 class="nombre">Producto</h3>
+                        <p class="precio">Precio</p>
+                        <p class="fecha">Fecha</p>
+                        <p class="lugar">Lugar</p>
+                        <button class="btn btn-dark">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </template>
 
-        <div class="d-flex flex-column text-center fs-5 py-3">
-            <span class="text-uppercase fs-4 fw-bold">Siguenos!</span>
-            <div class="social-content">
-                <a href="#"><i class="bi bi-facebook icon "></i></a>
-                <a href="#"><i class="bi bi-instagram icon "></i></a>
-                <a href="#"><i class="bi bi-whatsapp icon "></i></a>
+
+        <div class="position-relative">
+            <div class="navbar bg-light  position-fixed top-0 end-0 w-auto ">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="bi bi-basket2 m-2">Carrito</span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+
+                        <h2 id="carrito" class="text-center">
+                            <i class="fa-solid fa-cart-shopping"></i> Carrito de compras
+                        </h2>
+                        <hr />
+                        <table class="table m-0 p-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Item</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col">Acción</th>
+                                    <th scope="col">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="items"></tbody>
+                            <tfoot>
+                                <tr id="footer">
+                                    <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <template id="template-footer">
+                        <th scope="row" colspan="2">Total productos</th>
+                        <td>10</td>
+                        <td>
+                            <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                                vaciar todo
+                            </button>
+                        </td>
+                        <td class="font-weight-bold">$ <span>5000</span></td>
+                    </template>
+
+                    <template id="template-carrito">
+                        <tr>
+                            <th scope="row">id</th>
+                            <td>Café</td>
+                            <td>1</td>
+                            <td>
+                                <button class="btn btn-info btn-sm">+</button>
+                                <button class="btn btn-danger btn-sm">-</button>
+                            </td>
+                            <td>$ <span>500</span></td>
+                        </tr>
+                    </template>
+                </div>
             </div>
         </div>
     </div>
-    <div class="copyright-container d-flex text-center justify-content-center">
-        <span class="copyright">Hecho por <a href="https://github.com/Adrian2C" class="fw-bold">Adrian2C</a> &copy;2021,
-            Dulces Momentos</span>
-    </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-    crossorigin="anonymous"></script>
+
+    <footer class="footer">
+        <div class=" d-block d-md-flex justify-content-md-evenly pt-2">
+            <a href="../index.html" class="d-block text-center">
+                <img src="../assets/logo.png" alt="logo pasteleria" class="website-logo">
+            </a>
+            <div class="d-flex flex-column text-center fs-5 pt-3">
+                <span class="menu-title text-uppercase fw-bold">Menu</span>
+                <a href="../index.html" class=" fw-light text-white ">Inicio</a>
+                <a href="./services.html" class="fw-light  text-white ">Servicios</a>
+                <a href="./courses.html" class=" fw-light text-white ">Cursos</a>
+                <a href="./contact.html" class=" fw-light text-white ">Contacto</a>
+            </div>
+            <div class="d-flex flex-column text-center fs-5 pt-3">
+                <span class="menu-title text-uppercase fw-bold">CONTACTANOS</span>
+                <p class=" my-1 text-white fw-light">Tel: +54 11 2343-2345</p>
+                <p class=" my-1 text-white fw-light">Nuestromail@gmail.com</p>
+                <p class=" my-1 text-white fw-light">Av.Siempre viva 123, springield</p>
+            </div>
+
+            <div class="d-flex flex-column text-center fs-5 py-3">
+                <span class="text-uppercase fs-4 fw-bold">Siguenos!</span>
+                <div class="social-content">
+                    <a href="#"><i class="bi bi-facebook icon "></i></a>
+                    <a href="#"><i class="bi bi-instagram icon "></i></a>
+                    <a href="#"><i class="bi bi-whatsapp icon "></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-container d-flex text-center justify-content-center">
+            <span class="copyright">Hecho por <a href="https://github.com/Adrian2C" class="fw-bold">Adrian2C</a>
+                &copy;2021,
+                Dulces Momentos</span>
+        </div>
+    </footer>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
     <script src="../script.js"></script>
 </body>
 

@@ -1,9 +1,10 @@
 * {
   margin: 0;
   padding: 0;
+}
+html {
   scroll-behavior: smooth;
 }
-
 body {
   box-sizing: border-box;
   background-color: rgb(51, 44, 44);
@@ -25,13 +26,18 @@ a:hover {
 li {
   list-style: none;
 }
+
 .bi-shop {
   font-size: 5em;
 }
 .icon {
   font-size: 2em;
 }
-
+.mainContainer {
+  width: 95%;
+  margin: auto;
+  padding: 2em;
+}
 /*header*/
 .header {
   height: 80vh;
@@ -39,10 +45,11 @@ li {
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /*paralax*/
+  
 }
 .navBar {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  z-index: 2;
+  
 }
 .navBar__ul {
   background: rgba(136, 107, 107, 0.658);
@@ -60,17 +67,15 @@ li {
   transition: ease-in 0.3s;
   border-radius: 50px;
 }
-
-.nav__logo img {
+.logo__img {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: auto;
-  height: 70%;
+  height: 20em;
 }
-
 /*promo*/
 
 .bannerPromocional {
@@ -106,7 +111,10 @@ li {
 }
 
 /*main*/
-
+.carousel {
+  width: 100%;
+  margin: 2em auto;
+}
 .carousel-item img {
   height: 80vh;
 }
@@ -133,7 +141,7 @@ li {
 }
 
 .image .details {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   top: 0;
   right: 0;
@@ -151,6 +159,40 @@ li {
   transition-property: transform;
 }
 
+/*Cursos / carrito */
+
+.card {
+  background-color: rgba(30, 30, 30);
+  color: whitesmoke;
+  border: 2px solid rgba(30, 30, 30);
+}
+
+.btn-dark {
+  font-size: 1.2em;
+  font-weight: 600;
+  border-radius: 0.5rem;
+
+  padding: 8px 16px;
+  background-color: #862445;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.btn-dark:hover {
+  background-color: #5a2838;
+}
+
+.container {
+  max-width: 1400px;
+}
+
+.table {
+  background-color: whitesmoke;
+}
+
+.ticketsContainer {
+  background-color: whitesmoke;
+}
 /*Formulario*/
 
 .contact-wrap {
@@ -207,18 +249,7 @@ li {
   height: 140px;
 }
 
-.btn {
-  width: 100%;
-  padding: 8px 16px;
-  background-color: #862445;
-  color: #fff;
-  font-size: 17.6px;
-  border: none;
-  transition: 0.3s;
-}
-.btn:hover {
-  background-color: #9d4b72;
-}
+
 .contact-info-input::placeholder {
   color: #fff;
 }
@@ -239,21 +270,35 @@ li {
 
 /*Footer*/
 
-#footer {
+.footer {
   background-color: #4d3e3a;
   border-top: 2px solid rgb(46, 59, 59);
 }
-#footer .website-logo {
+.website-logo {
   width: 12rem;
 }
 .social-content a {
   padding: 3px;
 }
 .copyright-container {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(208, 104, 104, 0.3);
 }
 .copyright {
   opacity: 0.7;
   font-weight: 400;
   padding: 10px 0;
+}
+
+@media /* only screen and */(min-width: 768px) {
+  .header {
+    height: 80vh;
+  }
+  .logo__img {
+    height: 70%;
+  }
+  .mainContainer {
+    width: 75%;
+    margin: auto;
+    padding: 3em;
+  }
 }
