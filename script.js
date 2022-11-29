@@ -29,7 +29,7 @@ const fetchdata = async() => {
     }
 }
 
-//Eventos
+//=================Eventos=================
 cards.addEventListener('click', (e) =>{
     addCarrito(e)
 });
@@ -38,7 +38,7 @@ items.addEventListener('click', (e) =>{
     btnAccion(e)
 });
 
-//Funciones
+//=================Funciones=================
 const pintarCards = (data) => {
     data.forEach((producto) =>{
         templateCard.querySelector("h3").textContent = producto.nombre;
@@ -58,7 +58,7 @@ const addCarrito = (e) => {
         setCarrito(e.target.parentElement);
 
         Swal.fire({
-            title: "Felicitaciones!",
+            /* title: "Felicitaciones!", */
             text: "El producto se ha agregado al carrito",
             icon: "success",
             confirmButtonText: "Ok",
@@ -137,8 +137,8 @@ const pintarFooter = () => {
         pintarCarrito();
 
         Swal.fire({
-            title: "El carrito se ha vaciado!",
-            icon: "success",
+            title: "El carrito esta vacio!",
+            icon: "info",
             showConfirmButton: false,
             timer: 2000,
         });
@@ -146,35 +146,35 @@ const pintarFooter = () => {
 };
 
 const btnAccion = (e) => {
-    // Aumentar USO DE OPERADOR ++
-    if (e.target.classList.contains("btn-info")) {
-        const producto = carrito[e.target.dataset.id];
-        producto.cantidad++;
-        carrito[e.target.dataset.id] = { ...producto };
-        pintarCarrito();
+  // =================Aumentar USO DE OPERADOR ++=================
+  if (e.target.classList.contains("btn-info")) {
+    const producto = carrito[e.target.dataset.id];
+    producto.cantidad++;
+    carrito[e.target.dataset.id] = { ...producto };
+    pintarCarrito();
 
-        Swal.fire({
-            title: "Cool!",
-            text: "Has agregado un producto más al carrito",
-            icon: "success",
-            confirmButtonText: "Ok",
-        });
+    Swal.fire({
+      /*  title: "!", */
+      text: "Has agregado un producto más al carrito",
+      icon: "success",
+      confirmButtonText: "Ok",
+    });
+  }
+  // Disminuir
+  if (e.target.classList.contains("btn-danger")) {
+    const producto = carrito[e.target.dataset.id];
+    producto.cantidad--;
+    if (producto.cantidad === 0) {
+      delete carrito[e.target.dataset.id];
     }
-    // Disminuir
-    if (e.target.classList.contains("btn-danger")) {
-        const producto = carrito[e.target.dataset.id];
-        producto.cantidad--;
-        if (producto.cantidad === 0) {
-            delete carrito[e.target.dataset.id];
-        }
-        pintarCarrito();
+    pintarCarrito();
 
-        Swal.fire({
-            title: "Que lastima!",
-            text: "El producto se ha quitado del carrito",
-            icon: "warning",
-            confirmButtonText: "Ok",
-        });
-    }
-    e.stopPropagation();
+    Swal.fire({
+      /* title: "quitado!", */
+      text: "El producto se ha quitado del carrito",
+      icon: "warning",
+      confirmButtonText: "Ok",
+    });
+  }
+  e.stopPropagation();
 };
